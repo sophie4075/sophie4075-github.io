@@ -35,7 +35,7 @@
             resetInputStyles();
             setTimeout(resetConfirm, 8000);
 
-            form.reset();
+            form.submit();
         }
 
 
