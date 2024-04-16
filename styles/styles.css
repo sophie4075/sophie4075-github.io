@@ -1,0 +1,474 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+
+:root{
+    font-size: 1.3em;
+    color: #444CF7;
+    width: 100%;
+    font-family: "Rethink Sans", sans-serif;
+    --headline-font: "Shrikhand", sans-serif;
+    --weiss: #fffffff;
+    --schwarz: #1a1a1a;
+    --blocksatz: justify;
+    --article-margin: 2em 0.8em;
+    --text-line-hight: 2;
+    --text-xl: clamp(2rem, 5vw + 0.5rem, 18rem); /*18*/
+    /*„Die Schriftgröße soll mindestens 0.3rem groß sein und maximal 5rem groß.
+    Dazwischen soll sich die Schriftgröße fließend vergrößern. Sobald 5rem erreicht sind, bleibt die Skalierung stehen.“*/
+    --heading: clamp(0.3rem, 2.5vw + 0.5rem, 5rem);
+    --blue: #444CF7;
+}
+
+/*Schiebt Elemente offscreen, die Inhalte sind nur "sichtbar" für Screenreader, aber nicht visuell für den User*/
+.sr-only{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+
+html  {
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background: #EDEDE9 fixed;
+}
+
+main, form {
+
+}
+
+#about{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 95rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+}
+
+.info{
+    min-height: 100vh;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.info:nth-child(2), .info:nth-child(4){
+    opacity: 0.8;
+    background-image:  linear-gradient(var(--blue) 1.5px, transparent 1.5px), linear-gradient(to right, var(--blue) 1.5px, #F5EBE0  1.5px);
+    background-size: 35px 35px;
+    background-position: 0 23vh;
+
+
+
+}
+
+.info:nth-child(3){
+    opacity: 0.8;
+    background-image: radial-gradient(var(--blue) 0.75px, #EDEDE9 0.75px);
+    background-size: 15px 15px;
+}
+
+
+.list-margin{
+    margin: 0 auto;
+}
+
+.info h6{
+    font-size: 0.5rem;
+}
+
+.container{
+    margin: 100px;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity:0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.info h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cards{
+    display: flex;
+    background: #EDEDE9;
+    gap: 4em;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+
+.text-card{
+    flex: 1;
+    padding: 0.5em;
+}
+
+#about h2{
+    font-size: var(--text-xl);
+    margin: 0 auto;
+    color: var(--blue);
+}
+
+
+
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--headline-font) ;
+}
+
+.text-card li{
+    font-size: 0.5rem;
+}
+
+.highlight{
+    margin: 0.3rem auto;
+}
+
+.job-position, .degree{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0.3rem auto ;
+}
+.company, .institution{
+    margin: 0 auto;
+}
+
+
+.when-where{
+    font-weight: lighter;
+    color: #D5BDAF;
+    font-size: 0.55rem;
+    margin: 0;
+}
+
+
+header{
+    z-index: 9998;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background: #EDEDE9;
+}
+
+#logo{
+    width: 2%;
+    height: 2%;
+    min-width: 3em;
+    margin: 0.5rem 0;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+.mobile-nav-toggle{
+    display: none;
+}
+
+
+
+a{
+
+    /*Ermöglicht es Elementen, Werte über einen bestimmten Zeitraum zu ändern,
+    wodurch die Eigenschaftsänderungen animiert werden, anstatt dass sie sofort erfolgen.
+
+    transition: property time easing-function;
+
+    ease: Übergang mit langsamen Start, beschleunigt und endet langsam
+*/
+    transition: font-size .5s ease;
+}
+
+nav a {
+    font-family: "Rethink Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 0.4rem;
+    font-weight: lighter;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+
+    font-size: 0.5rem;
+}
+
+nav a:visited{
+    color: var(--blue);
+}
+
+
+.center{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+
+table{
+    margin: 2em 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+th{
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 1.3rem;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    font-size: 1rem ;
+}
+
+
+tr{
+    transition: background-color 0.3s ease;
+}
+
+tr:hover :not(th) {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+
+
+.responsive-form {
+    max-width: 33rem;
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.input-control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-container-label {
+    text-align: left;
+    min-width: 48%;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.form-container-input {
+    flex: 1;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    min-width: 45%;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: "Rethink Sans", sans-serif;
+    font-size: 0.5rem;
+    border: 0.5px solid hsl(219 91% 32% / .2);
+}
+
+.form-container-button {
+    width: 48%;
+    border-radius: 4px;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    flex: 1;
+    background-color: var(--blue);
+    font-family: var(--headline-font);
+    font-size: 0.8rem;
+}
+
+.form-container-button:hover{
+    background-color: #8582ea;
+    transition: ease 1s;
+}
+
+
+
+
+
+    /*Form Validation Styling*/
+.input-control input:focus, .input-control select:focus, .input-control textarea:focus {
+    /*Entfernt blaue Default Outline von dem aktiven Input Feld*/
+    outline: 0;
+}
+
+/*Modifizieren die Border Color von den Inputs, wenn die Input Validation (un)erfolgreich war*/
+.input-control.success input, .input-control.success select, .input-control.success textarea {
+    border: 2px solid #09c372;
+}
+
+.input-control.error input, .input-control.error select, .input-control.error textarea {
+    border: 2px solid #ff3860;
+}
+
+/*Error Message Styling*/
+.input-control .error p{
+    color: #ff3860;
+    font-size: 0.6rem;
+}
+
+form.success p:last-child {
+    font-family: var(--headline-font);
+    color: var(--blue);
+
+}
+
+
+.right-aligned{
+    float: right;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.footer-icon{
+    padding: 0 5vw;
+    margin: 1em 0;
+}
+
+@media (max-width: 44em) {
+    main{
+        display: block;
+    }
+
+    /*Responsive Table*/
+    table {
+        border: 0;
+    }
+
+    tr {
+        margin: 5%;
+    }
+
+    /*Zeilen Styling, jede zweite Table Row bekommt den Hintergrund*/
+    tr:nth-of-type(2n) {
+        background: #F3EBE2;
+    }
+
+    /*Für alle Zellen, damit die untereinander dargestellt werden*/
+    td {
+        display: flex;
+        flex-flow: row wrap;
+        border: none;
+        font-size: 0.9rem;
+        justify-content: space-evenly;
+    }
+
+    /*Table Head ausblenden*/
+    thead {
+        display: none;
+    }
+
+    /*Beschriftung in einer Zeile mit dazugehörigen Wert*/
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+
+    }
+
+
+   /*Navigation tablet/mobile */
+   nav ul{
+       position: fixed;
+       /*Damit das Layer weit genug oben liegt, aber immer noch unter dem Button*/
+       z-index: 1000;
+       /*"Nimmt 30% der linken Seite, die bleibt somit frei, wenn sich die Navigation öffnet*/
+       inset: 0 0 0 30%;
+       background: hsl(0 0% 100% / 0.5);
+       /*Die Ul ist bereits ein Flex Element, mit der Flex Direction wird nun also erreicht, dass
+       die li-Elemente untereinander dargestellt werden
+        */
+       flex-direction: column;
+       /*Nimmt den kleiner Wert, für den Fall dass der Bildschirm gedreht wird*/
+       padding: min(20vh, 10rem) 2em;
+       backdrop-filter: blur(1rem);
+       /*Die Navigation List nimmt 100% seiner Breite/width zur rechten Seite von der Seite */
+       transform: translateX(100%);
+       transition: transform 350ms ease-out;
+   }
+
+   nav ul[data-visible="true"]{
+       transform: translateX(0%);
+   }
+
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url("../Images/Icons/352270_close_icon.png");
+    }
+
+
+
+   .mobile-nav-toggle{
+       display: block;
+       position: absolute;
+       background-color: transparent;
+       /*Damit der Button immer ganz oben "liegt"*/
+       z-index: 9999;
+       background-repeat: no-repeat;
+       background-image: url("../Images/Icons/2931181_lines_list_menu_checklist_navigation_icon.png");
+       background-size: cover;
+       width: 1.5rem;
+       border: 0;
+       /*festes Seitenverhältnis */
+       aspect-ratio: 1 / 1;
+       top: 1.5rem;
+       right: 2rem;
+   }
+
+   .cards{
+       flex-direction: column;
+       gap: 1em;
+   }
+
+    .form-container-label,
+    .form-container-input,
+    .form-container-button {
+        flex: 100%;
+        min-width: 100%;
+    }
+
+    .form-container-button{
+        margin-bottom: 1em;
+    }
+
+}
