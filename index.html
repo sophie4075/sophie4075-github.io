@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family= Rethink Sans|Shrikhand">
+    <script src="Script/script.js" defer></script>
+    <meta name="author" content="Sophie Haack">
+    <meta name="date" content="2024-02-28">
+    <title>Portfolio</title>
+</head>
+<body>
+<header>
+    <div>
+        <img src="Images/Error418.png" alt="Logo" id="logo">
+    </div>
+
+    <button class="mobile-nav-toggle" aria-controls="navigation" aria-expanded="false"><span class="sr-only">Menü</span>
+    </button>
+
+    <nav id="navbar">
+        <ul data-visible="false" id="navigation">
+            <li><a href="#about">About</a></li>
+            <li><a href="#professional-experience">Experience</a></li>
+            <li><a href="#edu-and-training">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+
+    <article id="about">
+        <div class="center">
+            <h2 id="greeting"></h2>
+
+            <h3 id="intro">
+            </h3>
+        </div>
+    </article>
+
+    <article class="info" id="professional-experience">
+        <div class="container reveal">
+            <h2>Professional experience</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h4 class="job-position">Working Student Onsite Marketing</h4>
+                    <h5 class="company">AMORELIE</h5>
+                    <p class="when-where">June 2023 - Today | <span>Berlin, Germany</span></p>
+                    <ul>
+                        <li>Support by creating, managing & analysing marketing campaigns for the webshop</li>
+                        <li>Designing visually appealing mockups that effectively reflect the corporate identity of the
+                            company
+                        </li>
+                        <li>Creating and maintain CMS pages</li>
+                        <li>Maintaining elements of the webshop</li>
+                        <li>Optimising the performance of the webshop</li>
+                        <li>Optimising the user experience</li>
+                    </ul>
+                </div>
+
+                <div class="text-card">
+
+                    <h4 class="job-position">Hotel Specialist</h4>
+                    <h5 class="company">HOTEL ZOO BERLIN</h5>
+                    <p class="when-where">January 2022 - June 2023 | <span>Berlin, Germany</span></p>
+                    <h6 class="highlight">Event Management:</h6>
+                    <ul class="list-margin">
+                        <li>Creating event proposals with detailed timelines, venues, legal aspects, and budgets</li>
+                        <li>Closing contracts and managing administrative tasks for event sales, including data
+                            maintenance.
+                        </li>
+                    </ul>
+                    <h6 class="highlight">Front Desk:</h6>
+                    <ul class="list-margin">
+                        <li>Adressing guest needs and resolving complaints</li>
+                        <li>Upselling additional services and amenities</li>
+                        <li>Performing all check-in and check-out tasks
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="info" id="edu-and-training">
+        <div class="container reveal">
+            <h2>Education and Training</h2>
+            <div class="cards">
+                <div class="text-card">
+
+                    <h4 class="degree">B.Sc. Media Computer Science</h4>
+                    <h5 class="institution">Berliner Hochschule für Technik</h5>
+                    <p class="when-where">October 2022 - expected April 2026 | <span>Berlin, Germany</span></p>
+
+                </div>
+                <div class="text-card">
+                    <h4 class="degree">Apprenticeship - Hotel Industry Expert</h4>
+                    <h5 class="institution">SO/Berin Das Stue</h5>
+                    <p class="when-where">August 2019 - January 2022 | <span>Berlin, Germany</span></p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="info" id="skills">
+        <div class="container reveal">
+            <h2>Skills</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Skills</th>
+                            <th>Level</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Java / JavaFX</td>
+                            <td data-label="Level">&#9679 &#9675 &#9675</td>
+                        </tr>
+                        <tr>
+                            <td>HTML/CSS</td>
+                            <td data-label="Level">&#9679 &#9679 &#9675</td>
+                        </tr>
+                        <tr>
+                            <td>Javascript</td>
+                            <td data-label="Level">&#9679 &#9675 &#9675</td>
+                        </tr>
+                        <tr>
+                            <td>Typescript</td>
+                            <td data-label="Level">&#9679 &#9675 &#9675</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </article>
+
+</main>
+
+
+<div class="responsive-form reveal">
+    <h2>Contact</h2>
+    <p id="p">Do you want to say hello or want to get in touch?</p>
+    <p>Contact me!</p>
+    <form class="form-container" id="contact" action="/" method="GET">
+
+        <div class="input-control">
+            <label for="firstname" class="form-container-label">First name</label>
+            <input id="firstname" type="text" name="firstname" class="form-container-input" placeholder="Huckleberry">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="nachname" class="form-container-label">Last name</label>
+            <input id="nachname" type="text" name="nachname" class="form-container-input" placeholder="Finn">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label for="mail" class="form-container-label">E-Mail</label>
+            <input id="mail" type="text" class="form-container-input" name="mail" placeholder="berry@domain.com">
+            <div class="error"></div>
+        </div>
+
+        <div class="comment_section input-control">
+            <label for="message" class="form-container-label">Message</label>
+            <textarea id="message" class="form-container-input" placeholder="Hi, I would like to know..."></textarea>
+            <div class="error"></div>
+        </div>
+
+
+        <button type="submit"
+                class="form-container-button">
+            Submit
+        </button>
+
+        <button type="reset" id="reset_button" class="form-container-button" value="Reset">Reset
+        </button>
+
+    </form>
+
+</div>
+
+<footer>
+<div class="right-aligned footer-icon" >
+    <a href="https://linkedin.com/in/sophie-h-25154723b"><img class="icon" alt="LinkedIn Icon" src="Images/Icons/linkedin-logo.png"></a>
+    <a href="https://github.com/sophie4075/"><img class="icon" alt="GitHub Icon" src="Images/Icons/github.png"></a>
+</div>
+</footer>
+</body>
+</html>
