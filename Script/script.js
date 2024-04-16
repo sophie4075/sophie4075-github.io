@@ -36,6 +36,7 @@
             setTimeout(resetConfirm, 8000);
 
             form.submit();
+            form.reset();
         }
 
 
