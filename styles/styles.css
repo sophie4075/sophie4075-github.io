@@ -43,9 +43,6 @@ body{
     background: #EDEDE9 fixed;
 }
 
-main, form {
-
-}
 
 #about{
     position: relative;
@@ -63,8 +60,6 @@ main, form {
     display: flex ;
     justify-content: center;
     align-items: center;
-
-
 }
 
 
@@ -74,11 +69,9 @@ main, form {
     background-size: 35px 35px;
     background-position: 0 23vh;
 
-
-
 }
 
-.info:nth-child(3){
+.info:nth-child(3), .info:nth-child(5){
     opacity: 0.8;
     background-image: radial-gradient(var(--blue) 0.75px, #EDEDE9 0.75px);
     background-size: 15px 15px;
@@ -150,15 +143,15 @@ h2{
     margin: 0.3rem auto;
 }
 
-.job-position, .degree{
+.info h4 {
     font-weight: bold;
     text-transform: uppercase;
     margin: 0.3rem auto ;
 }
-.company, .institution{
+
+.info h5 {
     margin: 0 auto;
 }
-
 
 .when-where{
     font-weight: lighter;
@@ -212,6 +205,22 @@ a{
     ease: Übergang mit langsamen Start, beschleunigt und endet langsam
 */
     transition: font-size .5s ease;
+     color: var(--blue);
+}
+
+.CTA{
+    border: solid 2px var(--blue);
+    padding: 1em 0.5em;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.CTA:hover{
+    background: var(--blue);
+    color: #EDEDE8;
+    transition: ease 1s;
 }
 
 nav a {
@@ -365,6 +374,18 @@ form.success p:last-child {
 .footer-icon{
     padding: 0 5vw;
     margin: 1em 0;
+}
+
+.screenshot{
+    width: 35vw;
+}
+
+.image-container{
+    margin: 1em auto;
+}
+
+#project{
+    text-align: center;
 }
 
 @media (max-width: 44em) {
