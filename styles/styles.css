@@ -492,4 +492,8 @@ form.success p:last-child {
         margin-bottom: 1em;
     }
 
+    .CTA{
+        font-size: 10px;
+    }
+
 }
