@@ -166,8 +166,8 @@
     <h2>Contact</h2>
     <p id="p">Do you want to say hello or want to get in touch?</p>
     <p>Contact me!</p>
-    <form class="form-container" id="contact" target="_blank" action="https://formsubmit.co/420e2e0e63505086e3224665de441d0a" method="POST">
-
+    <form class="form-container" id="contact" target="_blank" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d4bf1b48-e390-482f-95c5-9d1dcd256c59">
         <div class="input-control">
             <label for="firstname" class="form-container-label">First name</label>
             <input id="firstname" type="text" name="firstname" class="form-container-input" placeholder="Huckleberry">
@@ -190,7 +190,7 @@
             <div class="error"></div>
         </div>
 
-
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
         <button type="submit"
                 class="form-container-button">
             Submit
